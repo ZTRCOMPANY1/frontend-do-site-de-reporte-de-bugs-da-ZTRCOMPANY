@@ -8,8 +8,20 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="brand"><span class="logo">ZTR</span><div><strong>ZTR COMPANY</strong><small>Report Center</small></div></div>
-    <nav><a href="./">Reportar</a>
+    <div class="brand">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Logo ZTR COMPANY">
+      </div>
+
+      <div>
+        <strong>ZTR COMPANY</strong>
+        <small>Report Center</small>
+      </div>
+    </div>
+
+    <nav>
+      <a href="./">Reportar</a>
+    </nav>
   </header>
 
   <main class="hero">
@@ -21,6 +33,7 @@
 
     <section class="card form-card">
       <h2>Novo reporte</h2>
+
       <form id="reportForm">
         <label>O que você quer reportar?</label>
         <select id="reportType" name="report_type" required>
@@ -40,8 +53,15 @@
         </div>
 
         <div class="grid-2">
-          <div><label>Seu nome</label><input id="playerName" type="text" placeholder="Opcional" /></div>
-          <div><label>Email</label><input id="playerEmail" type="email" placeholder="Opcional" /></div>
+          <div>
+            <label>Seu nome</label>
+            <input id="playerName" type="text" placeholder="Opcional" />
+          </div>
+
+          <div>
+            <label>Email</label>
+            <input id="playerEmail" type="email" placeholder="Opcional" />
+          </div>
         </div>
 
         <label>Prioridade</label>
@@ -62,8 +82,15 @@
         <textarea id="steps" placeholder="1. Abri o jogo... 2. Cliquei em... 3. Deu erro..."></textarea>
 
         <div class="grid-2">
-          <div><label>Dispositivo / sistema</label><input id="device" placeholder="Windows 10, Android, etc." /></div>
-          <div><label>Versão do jogo/app</label><input id="gameVersion" placeholder="Ex: v1.0.3" /></div>
+          <div>
+            <label>Dispositivo / sistema</label>
+            <input id="device" placeholder="Windows 10, Android, etc." />
+          </div>
+
+          <div>
+            <label>Versão do jogo/app</label>
+            <input id="gameVersion" placeholder="Ex: v1.0.3" />
+          </div>
         </div>
 
         <button type="submit">Enviar reporte</button>
@@ -73,6 +100,7 @@
   </main>
 
   <footer>ZTR COMPANY © Report System</footer>
+
   <script src="config.js"></script>
   <script src="assets/app.js"></script>
 </body>
