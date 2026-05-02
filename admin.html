@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZTR Admin | Reports</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">ZTR</span><div><strong>ZTR COMPANY</strong><small>Admin Panel</small></div></div>
+    <nav><a href="index.html">Reportar</a><a href="admin.html">Admin</a></nav>
+  </header>
+
+  <main class="admin-wrap">
+    <section id="loginPanel" class="card login-card">
+      <h1>Login Admin</h1>
+      <p>Acesso protegido para gerenciar reports e cadastrar jogos, sites e apps.</p>
+      <form id="loginForm">
+        <label>Email</label><input id="adminEmail" type="email" required />
+        <label>Senha</label><input id="adminPassword" type="password" required />
+        <button type="submit">Entrar</button>
+        <p id="loginMsg" class="message"></p>
+      </form>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <div class="dash-head"><div><p class="eyebrow">Painel administrativo</p><h1>Reportes recebidos</h1></div><button id="logoutBtn" class="secondary">Sair</button></div>
+      <div class="card">
+        <h2>Cadastrar novo item</h2>
+        <form id="catalogForm" class="catalog-form">
+          <select id="newType"><option value="game">Jogo</option><option value="site">Site</option><option value="app">App</option></select>
+          <input id="newName" placeholder="Nome do jogo/site/app" required />
+          <input id="newUrl" placeholder="URL opcional" />
+          <button type="submit">Adicionar</button>
+        </form>
+      </div>
+      <div class="reports-grid" id="reportsList"></div>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="assets/admin.js"></script>
+</body>
+</html>

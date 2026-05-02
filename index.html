@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZTR COMPANY | Report Center</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">ZTR</span><div><strong>ZTR COMPANY</strong><small>Report Center</small></div></div>
+    <nav><a href="index.html">Reportar</a><a href="admin.html">Admin</a></nav>
+  </header>
+
+  <main class="hero">
+    <section class="hero-text">
+      <p class="eyebrow">Sistema oficial de feedback</p>
+      <h1>Reporte bugs de jogos, sites e apps da ZTR COMPANY.</h1>
+      <p>Ajude a melhorar nossos produtos enviando detalhes claros, prioridade e passos para reproduzir o problema.</p>
+    </section>
+
+    <section class="card form-card">
+      <h2>Novo reporte</h2>
+      <form id="reportForm">
+        <label>O que você quer reportar?</label>
+        <select id="reportType" name="report_type" required>
+          <option value="game">Jogo</option>
+          <option value="site">Site</option>
+          <option value="app">App / Launcher</option>
+        </select>
+
+        <div id="itemBox">
+          <label id="itemLabel">Qual jogo?</label>
+          <select id="itemSelect" name="item_id" required></select>
+        </div>
+
+        <div id="siteLinkBox" class="hidden">
+          <label>Link do site com problema</label>
+          <input id="siteUrl" type="url" placeholder="https://exemplo.com/pagina" />
+        </div>
+
+        <div class="grid-2">
+          <div><label>Seu nome</label><input id="playerName" type="text" placeholder="Opcional" /></div>
+          <div><label>Email</label><input id="playerEmail" type="email" placeholder="Opcional" /></div>
+        </div>
+
+        <label>Prioridade</label>
+        <select id="severity">
+          <option value="low">Baixa</option>
+          <option value="medium" selected>Média</option>
+          <option value="high">Alta</option>
+          <option value="critical">Crítica</option>
+        </select>
+
+        <label>Título do problema</label>
+        <input id="title" type="text" placeholder="Ex: Login não entra / carro atravessa pista" required />
+
+        <label>Descrição completa</label>
+        <textarea id="description" placeholder="Explique o que aconteceu..." required></textarea>
+
+        <label>Passos para reproduzir</label>
+        <textarea id="steps" placeholder="1. Abri o jogo... 2. Cliquei em... 3. Deu erro..."></textarea>
+
+        <div class="grid-2">
+          <div><label>Dispositivo / sistema</label><input id="device" placeholder="Windows 10, Android, etc." /></div>
+          <div><label>Versão do jogo/app</label><input id="gameVersion" placeholder="Ex: v1.0.3" /></div>
+        </div>
+
+        <button type="submit">Enviar reporte</button>
+        <p id="message" class="message"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>ZTR COMPANY © Report System</footer>
+  <script src="config.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
